@@ -29,6 +29,7 @@ int main()
         std::cout << "\nc1 et c3 sont differents" << std::endl;
     }
 
+
     std::cout << "\n" << std::endl;
     //translate c2   +(1.0, 2.0)
     std::cout << "c2 avant translation : " << std::endl;

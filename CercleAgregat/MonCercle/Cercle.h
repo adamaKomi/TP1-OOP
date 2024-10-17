@@ -6,7 +6,7 @@ private:
 	static const double PI;
 	int id;
 	double r;
-	Point *c;
+	Point *centre;
 public:
 	Cercle(int id,double r , Point *p);
 	void Affiche() const;
@@ -14,7 +14,7 @@ public:
 	void Translate(double dx, double dy);
 	double surface() const;
 	double perimetre() const;
-	bool operator==(const Cercle& c) const;
+	bool operator==(const Cercle& cercle) const;
 	bool appart(const Point& p);
 	~Cercle();
 

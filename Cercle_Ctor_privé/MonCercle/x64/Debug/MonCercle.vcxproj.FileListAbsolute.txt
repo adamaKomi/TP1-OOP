@@ -1,0 +1,3 @@
+C:\Users\pc\source\repos\MonCercle\MonCercle\x64\Debug\MonCercle.exe
+C:\Users\pc\source\repos\TP1\MonCercle\MonCercle\x64\Debug\MonCercle.exe
+C:\Users\pc\source\repos\TP1\Cercle_Ctor_privé\MonCercle\x64\Debug\MonCercle.exe

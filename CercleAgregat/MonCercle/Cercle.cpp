@@ -6,7 +6,7 @@ const double Cercle::PI = 3.14;
 
 Cercle::Cercle(int id, double r, Point *p): id(id), r(r)
 {
-	this->c = new Point(*p);
+	this->centre = new Point(*p);
 	std::cout << "Ctor cercle" << std::endl;
 }
 
@@ -15,7 +15,7 @@ void Cercle::Affiche() const
 	std::cout << "id : " << this->id << std::endl;
 	std::cout << "rayon : " << this->r << std::endl;
 	std::cout << "centre : " << std::endl;
-	this->c->Afficher();
+	this->centre->Afficher();
 }
 
 void Cercle::updateR(double dr)
@@ -25,7 +25,7 @@ void Cercle::updateR(double dr)
 
 void Cercle::Translate(double dx, double dy)
 {
-	this->c->translate(dx,dy);
+	this->centre->translate(dx,dy);
 }
 
 double Cercle::surface() const
@@ -40,17 +40,17 @@ double Cercle::perimetre() const
 
 bool Cercle::operator==(const Cercle& c) const
 {
-	return (this->r == c.r) && (this->c->distance(*c.c) == 0);
+	return (this->r == c.r) && (this->centre->distance(*c.centre) == 0);
 }
 
 bool Cercle::appart(const Point& p)
 {
-	return this->c->distance(p)<=this->r;
+	return this->centre->distance(p)<=this->r;
 }
 
 Cercle::~Cercle()
 {
-	delete this->c;
+	delete this->centre;
 	std::cout << "Dtor cercle" << std::endl;
 }
 
